@@ -5,7 +5,7 @@
     <name>Domains List Hook Example</name>
     <description>Demonstrates how to embed custom data in domains list.</description>
     <version>1.0</version>
-    <release>0</release>
+    <release>1</release>
     <vendor>Plesk</vendor>
     <plesk_min_version>17.0.13</plesk_min_version>
 </module>

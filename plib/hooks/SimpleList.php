@@ -5,7 +5,7 @@ class Modules_HookSimplelist_SimpleList extends pm_Hook_SimpleList
 {
     public function isEnabled($controller, $action, $activeList)
     {
-        // Modify only domains lists 
+        // Modify only domains lists
         return $controller === 'domain' && $action === 'list'
             || $controller === 'customer' && $action === 'domains'
             || $controller === 'reseller' && $action === 'domains';
@@ -25,43 +25,33 @@ class Modules_HookSimplelist_SimpleList extends pm_Hook_SimpleList
             // Modify some data
             $row['realSize'] += 1048576;
 
-            // Add spme data for new column
-            $row['rand'] = rand(0, 100);
+            // Add some data for new column
+            $row['extHookSimplelistRand'] = rand(0, 100);
         }
 
         return $data;
     }
 
-
     public function getColumns($controller, $action, $activeList)
     {
         return [
             // Add 'Random' column
-            'rand' => [
+            'extHookSimplelistRand' => [
                 'title' => 'Random',
-                'order' => -3,
+                'insertBefore' => -3,
             ]
         ];
     }
 
     public function getColumnsOverride($controller, $action, $activeList)
     {
-        if ($controller === 'customer' || $controller === 'reseller') {
-            return [
-                // Hide 'Setup Date' column
-                3 => [
-                    'isVisible' => false,
-                ],
-            ];
-        }
-
         return [
             // Change 'Subscriber' column title to 'Owner'
-            3 => [
+            'ownerName' => [
                 'title' => 'Owner',
             ],
             // Hide 'Setup Date' column
-            4 => [
+            'setupDate' => [
                 'isVisible' => false,
             ],
         ];
