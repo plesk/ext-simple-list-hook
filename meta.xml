@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 1999-2016. Parallels IP Holdings GmbH. -->
 <module>
-    <id>hook-simplelist</id>
+    <id>simple-list-hook</id>
     <name>Domains List Hook Example</name>
     <description>Demonstrates how to embed custom data in domains list.</description>
     <version>1.0</version>

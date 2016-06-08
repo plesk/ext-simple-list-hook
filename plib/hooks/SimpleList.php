@@ -1,7 +1,7 @@
 <?php
 // Copyright 1999-2016. Parallels IP Holdings GmbH. All Rights Reserved.
 
-class Modules_HookSimplelist_SimpleList extends pm_Hook_SimpleList
+class Modules_SimpleListHook_SimpleList extends pm_Hook_SimpleList
 {
     public function isEnabled($controller, $action, $activeList)
     {
