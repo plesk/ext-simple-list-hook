@@ -4,9 +4,9 @@
     <id>simple-list-hook</id>
     <name>Domains List Hook Example</name>
     <description>Demonstrates how to embed custom data in domains list.</description>
-    <version>1.0</version>
+    <version>1.1</version>
     <release>1</release>
     <vendor>Plesk</vendor>
     <url>https://github.com/plesk/ext-simple-list-hook</url>
-    <plesk_min_version>17.0.13</plesk_min_version>
+    <plesk_min_version>17.0.14</plesk_min_version>
 </module>

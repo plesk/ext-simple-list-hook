@@ -23,7 +23,7 @@ class Modules_SimpleListHook_SimpleList extends pm_Hook_SimpleList
     {
         foreach ($data as &$row) {
             // Modify some data
-            $row['realSize'] += 1048576;
+            $row['diskUsage'] = size_mb_printing($row['realSize'] + 1048576, true);
 
             // Add some data for new column
             $row['extHookSimplelistRand'] = rand(0, 100);
