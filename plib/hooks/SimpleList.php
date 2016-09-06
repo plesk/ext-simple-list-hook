@@ -6,9 +6,10 @@ class Modules_SimpleListHook_SimpleList extends pm_Hook_SimpleList
     public function isEnabled($controller, $action, $activeList)
     {
         // Modify only domains lists
-        return $controller === 'domain' && $action === 'list'
-            || $controller === 'customer' && $action === 'domains'
-            || $controller === 'reseller' && $action === 'domains';
+        return Zend_Controller_Front::getInstance()->getRequest()->getModuleName() === 'admin'
+            && ($controller === 'domain' && $action === 'list'
+                || $controller === 'customer' && $action === 'domains'
+                || $controller === 'reseller' && $action === 'domains');
     }
 
     public function getDataProvider($controller, $action, $activeList, $data)
