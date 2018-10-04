@@ -6,7 +6,7 @@
     <description>Demonstrates how to embed custom data in domains list.</description>
     <category>example</category>
     <version>1.1</version>
-    <release>3</release>
+    <release>4</release>
     <vendor>Plesk</vendor>
     <url>https://github.com/plesk/ext-simple-list-hook</url>
     <plesk_min_version>17.0.14</plesk_min_version>
