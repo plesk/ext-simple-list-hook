@@ -14,8 +14,8 @@ class Modules_SimpleListHook_SimpleList extends pm_Hook_SimpleList
 
     public function getDataProvider($controller, $action, $activeList, $data)
     {
-        // Hide all domains for client with id 5
-        $data->where('c.id <> ?', 5);
+        // Hide all domains for client from "News Snow" company
+        $data->where('c.cname <> ?', 'News Snow');
 
         return $data;
     }
